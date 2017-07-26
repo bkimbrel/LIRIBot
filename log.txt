@@ -1,0 +1,61 @@
+[
+    "Test Tweet"
+]{
+    "artists": "Noah And The Whale",
+    "songName": "5 Years Time",
+    "spotifyLink": "https://open.spotify.com/album/4bzNinbJcnth182w03fSL2",
+    "album": "Peaceful, The World Lays Me Down"
+}{
+    "artists": "Backstreet Boys",
+    "songName": "I Want It That Way",
+    "spotifyLink": "https://open.spotify.com/album/1NslKOZobWxINFaFkLol3r",
+    "album": "The Hits--Chapter One"
+}{
+    "artists": "Harry Styles",
+    "songName": "Sign of the Times",
+    "spotifyLink": "https://open.spotify.com/album/6YDkzHVTEzMXZOVd1r5NqR",
+    "album": "Sign of the Times"
+}{
+    "artists": "Various Artists",
+    "songName": "I Saw the Sign",
+    "spotifyLink": "https://open.spotify.com/album/69e1JpiKAEZSEbY8QH780e",
+    "album": "Best of Euro Dance Music Hits Songs 90's. Lo Mejor de la Música Dance Dance Eurodance de los 90"
+}[
+    "Test Tweet"
+][
+    "#SharkAfterDark 😍😍😍 https://t.co/KWN1O0M1JE",
+    "Thank you for the opportunity to be one of this year’s Shark Finbassadors. Enjoyed chatting with you all! Happy #SharkWeek!  -@ABC4EXPLORE",
+    "It was an honor to be part of this amazing show! #NYCSHARKS -@ABC4EXPLORE",
+    "#SharkAfterDark starts NOW as part of #SharkWeek on @Discovery! @eliroth's guests are  @hardwick @morereginahall &amp;… https://t.co/15dmBoPN6j",
+    "Amazing to see @TheSharkDoctor in action in NYC with GWS! -@ABC4EXPLORE #SharkWeek #SharksAndTheCityNYC",
+    "😂😂😂🤣🤣🤣 https://t.co/foFkOmPTem",
+    "You gotta love the fact that #GreatWhite Sharks pick the coolest cities on the planet to live in! -@ABC4EXPLORE #SharksAndTheCity #SharkWeek",
+    "Did you miss the whale chow down in #SharksAndTheCityNYC? #Watch it again. #SharkWeek https://t.co/X1bxsIaBha",
+    "Epic to watch the shark rush up &amp; hit the #TunaTowCam! -@ABC4EXPLORE #sharkweek",
+    "I’ve been filming in South Africa every single year for 2002! I love #CapeTown! -@ABC4EXPLORE #sharkweek",
+    "It was definitely more dangerous inside that cage than outside! The surge was crazy! -@ABC4EXPLORE #SharkWeek #SharksAndTheCity",
+    "RT @AliciaLP: All the times I've been in NYC and on the harbor, I never knew Great Whites were there 😂 #SharksAndTheCityNY #SharkWeek",
+    "I was born in New York City!!! Hometown Great White Sharks!!! -@ABC4EXPLORE #sharkweek",
+    "NYC Great White Shark! Go @TheSharkDoctor !!! -@ABC4EXPLORE #sharkweek #sharksandthecity",
+    "I can’t wait for #SharksAndTheCityNYC coming up next! -@ABC4EXPLORE #SharkWeek",
+    "Cinema &amp; Science can truly #SaveSharks! Happy Shark Week! -@ABC4EXPLORE",
+    "Guadalupe is a seriously sharky island &amp; I love it! -@ABC4EXPLORE #sharkweek",
+    "RT @skahrs20: Shark Week 👏🏼👏🏼👏🏼👏🏼👏🏼#SharkWeek #sharksandthecityla #SharkLab @ABC4EXPLORE continues to amaze. https://t.co/BEFIMQAHJ9",
+    "RT @OldhamAshley: @SharkWeek @ABC4EXPLORE Loving Shark in the city 🦈💄💅🏼🛍 #SharkWeek",
+    "Deploying my #SharkFinCam is one of my favorite technologies to run recon on the secret life of sharks! -@ABC4EXPLORE #SharkWeek"
+]{
+    "artists": "Harry Styles",
+    "songName": "Sign of the Times",
+    "spotifyLink": "https://open.spotify.com/album/6YDkzHVTEzMXZOVd1r5NqR",
+    "album": "Sign of the Times"
+}{
+    "artists": "Ace of Base",
+    "songName": "The Sign",
+    "spotifyLink": "https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB",
+    "album": "The Sign (US Album) [Remastered]"
+}{
+    "artists": "Ace of Base",
+    "songName": "The Sign",
+    "spotifyLink": "https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB",
+    "album": "The Sign (US Album) [Remastered]"
+}

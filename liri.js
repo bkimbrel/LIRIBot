@@ -3,15 +3,17 @@ var userInputOne = process.argv[2];
 var userInputTwo = process.argv[3];
 var fs = require('fs');
 var logArray = [];
+var request = require('request');
 
 
-//Node Command Line Aguments For Calling Specific API Requests
+//Function to grab tasks 
+
 if (userInputOne === 'my-tweets') {
-    twitterCall();
+    twitterTime();
 } else if (userInputOne === 'spotify-this-song') {
-    spotifyCall();
+    spotifyAction();
 } else if (userInputOne === 'movie-this') {
-    movieDataCall();
+    movieInfo();
 } else if (userInputOne === 'do-what-it-says'){
     fs.readFile('./random.txt', function(err, data) {
         if(err) {
@@ -20,13 +22,14 @@ if (userInputOne === 'my-tweets') {
         var file = data.toString().split(",");
         userInputOne = file[0];
         userInputTwo = file[1];
-        spotifyCall();
+        spotifyAction();
+
     });
 
 };
 
-//Twitter Get Request And Return Object Function
-function twitterCall() {
+//Twitter Action - Return requests 
+function twitterTime() {
     var Twitter = require('twitter');
     var client = new Twitter(keys.twitterKeys);
     var params = { screen_name: 'SharkWeek', count: "20" };
@@ -36,24 +39,28 @@ function twitterCall() {
                 var twitterObj = tweets[key].text
                 console.log("===========", twitterObj);
                 logArray.push(twitterObj);
-                console.log("this is my array++++++++++++++++++++++",logArray);                
+                console.log("Twitter Array",logArray);                
             }
             fs.appendFile('log.txt', JSON.stringify(logArray,null, 4), function(err) {
                 if(err) {
                     return console.log(err);
                 }
 
-                console.log("The file was saved!");
+                console.log("Tweet Time!");
             }); 
         }
     });
 }
 
-
 //Spotify API Request and Return Object Function
-function spotifyCall() {
+function spotifyAction() {
     var Spotify = require('node-spotify-api');
     var spotify = new Spotify(keys.spotifyKeys);
+
+    if (!userInputTwo) {
+        userInputTwo = "Ace of Base";
+    }
+
     spotify.search({ type: 'track', query: `${userInputTwo}`, limit: '1' }, function(err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
@@ -76,46 +83,34 @@ function spotifyCall() {
                     return console.log(err);
                 }
 
-                console.log("The file was saved!");
+                console.log("Play my song!");
             }); 
     });
 };
 
 
 //Movie Database API Request and Return Object Function
-function movieDataCall() {
-    var request = require('request');
-    request(`http://www.omdbapi.com/?t=${userInputTwo}&tomatoes=true&${keys.movieKey}`, function(error, response, body) {
-        console.log('error:', error);
-        console.log('statusCode:', response && response.statusCode);
-        var bodyObj = JSON.parse(body);
-        var logObj = {
-            title: bodyObj.Title, 
-            year: bodyObj.Year,
-            rating: bodyObj.Ratings[0].Value,
-            country: bodyObj.Country,
-            language: bodyObj.Language,
-            plot: bodyObj.Plot,
-            actors: bodyObj.Actors,
-            rottenTom: bodyObj.Ratings[1].Value
-        }
-        // var stringifyObj = JSON.stringify(logObj);
-            fs.appendFile('log.txt', JSON.stringify(logObj,null, 4), function(err) {
-                if(err) {
-                    return console.log(err);
-                }
+//function to search a movie title and console log the information about the movie
 
-                console.log("The file was saved!");
-            });         
-        console.log(`
-          Title = ${bodyObj.Title}
-          Year = ${bodyObj.Year}
-          Rating = ${bodyObj.Ratings[0].Value}
-          Country = ${bodyObj.Country}
-          Language = ${bodyObj.Language}
-          Plot = ${bodyObj.Plot}
-          Actors = ${bodyObj.Actors} 
-          Rotten Tomatoes Rating = ${bodyObj.Ratings[1].Value} 
-          `);       
+function movieInfo () {
+    if (!userInputTwo) {
+        userInputTwo = "Batman+Begins";
+    }
+    request('http://www.omdbapi.com/?apikey=40e9cece&t=' + userInputTwo + `&tomatoes=true`, function (error, response, body) {
+      var movieObj = JSON.parse(body);
+      if (movieObj.Title === undefined && movieObj.Plot === undefined) {
+        console.log("Sorry! Selection not found, try another title.");
+      }
+      else {
+        console.log("Your movie Selection: ");
+        console.log("Title: " + movieObj.Title);
+        console.log("Year: " + movieObj.Year);
+        console.log("Rating: " + movieObj.Rated);
+        console.log("Country Produced In: " + movieObj.Country);
+        console.log("Language: " + movieObj.Language);
+        console.log("Plot: " + movieObj.Plot);
+        console.log("Actors/Actresses: " + movieObj.Actors);
+        console.log("Rotten Tomatoes URL: " + movieObj.tomatoURL);
+      }
     });
-};
+  };
